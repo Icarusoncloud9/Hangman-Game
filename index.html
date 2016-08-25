@@ -1,18 +1,43 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Hangman</title>
+	<title></title>
+	<script src="https://code.jquery.com/jquery-3.1.0.js" integrity="sha256-slogkvB1K3VOkzAI8QITxV3VzpOnkeNVsKvtkYLMjfk=" crossorigin="anonymous"></script>
+
+	<script src="http://chancejs.com/chance.min.js"></script>
+	<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
 </head>
 <body>
 
-<h1>Guess the International Territory</h1>
-<p id="greeting"></p>
+<div class="container">
+	<div>
+		<div class="well">
+			<h1>International Hangman</h1>
+			<h2><strong>Rules: </strong>In order to guess what country or territory is being displayed onscreen, type a letter from a to z. If you guess right, the letter will be displayed in the corresponding spot of the word. If not, it will be added to the wrong key counter.</h2>
+		</div>
+	</div>
+	<div class="jumbotron">
+		<h1 id="word"></h1>
+		<p id="guesses"></p>
+		<p id="choices"></p>
+		<h2 id="games"></h2>
+		<h2 id="wins"></h2>
+		<h2 id="losses"></h2>
+	</div>
 
-<h2 id="rules"><strong>Rules of the game: </strong>The game is hangman. You have a defined amount of chances to guess the right letters of a country, island, or geographical location generated randomly. Each time you type a letter in, it will count the amount of letters you have guessed correctly, incorrectly, and whether you have won or lost the game in a counter located on the side.</h2>
 
-<h1 id="rules">When you have understood the rules of the game, you can press the button at the bottom of the screen to begin the game.</h1>
+</div>
 
-<button name="Understood" type="button"></button>
-<script src="assets/javascript/game.js" type="text/javascript"></script>
+<script type="text/javascript" src="assets/javascript/game.js"></script>
 </body>
 </html>
