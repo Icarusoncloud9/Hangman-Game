@@ -16,28 +16,41 @@
 	<!-- Latest compiled and minified JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
+	<link rel="stylesheet" href="assets/css/reset.css">
+	<link rel="stylesheet" href="assets/css/style.css">
+	<link rel="stylesheet" href="assets/css/hover.css" media="all">
+
+
+
 </head>
 <body>
 
-<div class="container">
+<div class="fluid-container">
+<div class="well well-lg " id="well-lg">
+	<h1><strong>International Hangman</strong></h1>
+</div>
+
+<div class="container-fluid img-square" style="z-index: -99; width: 100%; height: 100%">
+<iframe class="embed-responsive-item hvr-pulse-grow" frameborder="0" height="315px" width="100%" src="https://www.youtube.com/embed/HttdxjYK7EQ?autoplay=1" frameborder="0" allowfullscreen></iframe>
+</div>
+<div class="container-fluid">
 	<div>
-		<div class="well">
-			<h1>International Hangman</h1>
-			<h2><strong>Rules: </strong>In order to guess what country or territory is being displayed onscreen, type a letter from a to z. If you guess right, the letter will be displayed in the corresponding spot of the word. If not, it will be added to the wrong key counter.</h2>
+		<div class="well hvr-shutter-in-horizontal">
+			<h3><strong>Rules: </strong><em>In order to guess what country or territory is being displayed onscreen, type a letter from a to z. If you guess right, the letter will be displayed in the corresponding spot of the word. If not, it will be added to the wrong key counter. You have 10 chances to guess correctly. *Fair Warning, there are spaces, hyphens, and periods.*</em></h3>
 		</div>
 	</div>
-	<div class="jumbotron">
-		<h1 id="word"></h1>
-		<p id="guesses"></p>
-		<p id="choices"></p>
-		<h2 id="games"></h2>
-		<h2 id="wins"></h2>
-		<h2 id="losses"></h2>
+	<div class="well">
+		<h1 id="word">Name of Country: Press any key to start</h1>
+		<h2 id="guesses">Letters picked by player: </h2>
+		<h2 id="choices"></h2>
+		<h2 id="games">Number of Games: </h2>
+		<h2 id="wins">Number of Wins: </h2>
+		<h2 id="losses">Number of Losses: </h2>
 	</div>
 
 
 </div>
-
+</div>
 <script type="text/javascript" src="assets/javascript/game.js"></script>
 </body>
 </html>

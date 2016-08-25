@@ -1,3 +1,27 @@
-.container {
-	opacity: .5;
+body {
+	background-image: url("http://icons.iconarchive.com/icons/paomedia/small-n-flat/1024/globe-icon.png");
+	background-repeat: no-repeat;
+	background-position: center;
+	position: absolute;
+	margin: 5% auto;
+	background-color: #2956B2;
+}
+
+.container-fluid {
+	opacity: .95;
+}
+.well {
+	opacity: .85;
+	margin: 2%;
+}
+
+#well-lg {
+	text-align: center;
+	align-items: center;
+}
+h1 {
+	letter-spacing: 5px;
+}
+h3 {
+	font-weight: bold;
 }

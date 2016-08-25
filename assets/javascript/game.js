@@ -1,3 +1,9 @@
+//Jquery
+$('#word').html(useableArray);
+$('#guesses').html(userChoice);
+$('#games').html(game);
+$('#wins').html(wins);
+$('#losses').html(losses);
 
 //Stating my variables first and forthmost
 
@@ -26,11 +32,11 @@ convertToArray(country, useableArray);
 country = country.split("");
 chances = 10;
 
-console.log(country);
-console.log(useableArray);
+// console.log(country);
+// console.log(useableArray);
 
 //This is used to convert country into an array
-console.log("LINE 29 COUNTRY: " + country);
+//console.log("LINE 29 COUNTRY: " + country);
 
 
 //This is going to determine the amount of chances left.
@@ -64,10 +70,10 @@ function compareAndPush(a, b) {
 function recordKey(letter) {
 	userChoice.push(tempStorage);
 	keysPressed++;
-	console.log(userChoice);
-	console.log(keysPressed);
+	// console.log(userChoice);
+	// console.log(keysPressed);
 	
-	console.log(chances);
+	// console.log(chances);
 }
 
 //Use this function for wins
@@ -78,7 +84,7 @@ function winning(a, b) {
         if (b.indexOf(a[i]) != -1)
             matches++;
         	if (matches == country.length) {
-        		alert("You won!");
+        		//alert("You won!");
     			wins++;
     			game++;
 				chances = 0;
@@ -108,7 +114,7 @@ function lost(a, b) {
 			}
 		
 	if (chances == 0) {
-	alert("lost");
+	//alert("lost");
 	losses++;
 	game++;
 	chances = 0;
@@ -135,7 +141,7 @@ function chancesCounter(a, b, c) {
 
 function checkKeys(letter){
 
-	console.log("LETTER IS: " + letter)
+	//console.log("LETTER IS: " + letter)
 
 	var letterExists = false;
 
@@ -145,7 +151,7 @@ function checkKeys(letter){
 		// console.log(country[i])
 
 		if(letter == country[i]){
-			alert("Letter exists");
+			//alert("Letter exists");
 			letterExists = true;
 		}
 
@@ -161,7 +167,7 @@ function checkKeys(letter){
 
 	} 
 
-	console.log("Useable Array", useableArray);
+	//console.log("Useable Array", useableArray);
 }
 
 
@@ -174,11 +180,13 @@ document.onkeyup = function(event){
 	checkKeys(tempStorage);
 	lost(tempStorage, country);
 	winning(useableArray, country);
+	$('#word').html("Name of Country: " + useableArray.join(""));
+	$('#guesses').html("Letters picked by player: " + userChoice);
+	$('#games').html("Number of Games: " + game);
+	$('#wins').html("Number of Wins: " + wins);
+	$('#losses').html("Number of Losses: " + losses);
 
 }
 
 
-
-//Jquery
-//$(#word)
 
