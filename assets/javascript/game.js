@@ -23,7 +23,7 @@ var tempStorage;
 //Convert strings into useable arrays
 //a being country and b being the size of useableArray
 function convertToArray(a, b) {
-	for(var i = 0, length1 = a.length; i < length1; i++){
+	for(var i = 0; i < a.length; i++){
 		b.push("_");
 	}
 }
